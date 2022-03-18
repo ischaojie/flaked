@@ -87,6 +87,7 @@ setup(
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     entry_points={
         "console_scripts": ["flaked=flaked.cli:main"],
+        "flake8.extension": ["SH = flaked.plugins.flaked_shire:ShireChecker"],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,

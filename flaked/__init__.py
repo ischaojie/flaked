@@ -12,7 +12,7 @@ from pygments import lex
 from pygments.lexers import MakoLexer
 from pygments.token import string_to_tokentype
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 
 def is_import_start(token, value):
@@ -46,7 +46,7 @@ def parse_mako(source):
 def parse_file(filename, source):
     mako_ext = [".mako", ".html"]
     _, ext = os.path.splitext(filename)
-    return parse_mako(source) if ext in mako_ext else ""
+    return parse_mako(source) if ext in mako_ext else None
 
 
 # TODO: multiple files not work
