@@ -12,7 +12,7 @@ from pygments import lex
 from pygments.lexers import MakoLexer
 from pygments.token import string_to_tokentype
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 
 def is_import_start(token, value):
